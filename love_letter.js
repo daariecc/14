@@ -1,7 +1,19 @@
-document.getElementById('open-btn').addEventListener('click', function() {
-    document.getElementById('envelope').classList.add('open');
-});
-
-document.getElementById('reset-btn').addEventListener('click', function() {
-    document.getElementById('envelope').classList.remove('open');
+$(document).ready(function () {
+  $(".container")
+    .mouseenter(function () {
+      $(".card").stop().animate(
+        {
+          top: "-90px",
+        },
+        "slow"
+      );
+    })
+    .mouseleave(function () {
+      $(".card").stop().animate(
+        {
+          top: 0,
+        },
+        "slow"
+      );
+    });
 });
